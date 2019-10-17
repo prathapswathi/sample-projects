@@ -28,7 +28,7 @@ include_once "header.php";
  
 // read products button
 echo "<div class='right-button-margin'>";
-    echo "<a href='index.php' class='btn btn-primary pull-right' style='background-color:lightgray'>";
+    echo "<a href='index.php' class='btn btn-primary pull-right' style='background-color:lightgray;color:black'>";
         echo "<span class='glyphicon glyphicon-list'></span> Products";
     echo "</a>";
 

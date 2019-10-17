@@ -88,6 +88,10 @@ function CheckProduct(val){
 });
 </script>
 
+<script>
+    var data = CKEDITOR.instances.myeditor.getData();
+</script>
+
 
 </body>
 </html>
