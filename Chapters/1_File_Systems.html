@@ -1,0 +1,14 @@
+&lt;p&gt;&lt;strong&gt;What is File System?&lt;/strong&gt;&lt;br /&gt;
+A File Management system is a DBMS that allows acces to single files or tables at a time. In a File System, data is directly stored in set of files. It contains flat files that have no relation to other files (when only one table is stored in single file, then this file is known as flat file).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advantages of DBMS over File system &amp;ndash;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Data redundancy and inconsistency &amp;ndash;&lt;/strong&gt;&amp;nbsp;Redundancy is the concept of repetition of data i.e. each data may have more than a single copy. The file system cannot control redundancy of data as each user defines and maintains the needed files for a specific application to run. There may be a possibility that two users are maintaining same files data for different applications. Hence changes made by one user does not reflect in files used by second users, which leads to inconsistency of data. Whereas DBMS controls redundancy by maintaining a single repository of data that is defined once and is accessed by many users. As there is no or less redundancy, data remains consistent.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Data sharing &amp;ndash;&lt;/strong&gt;&amp;nbsp;File system does not allow sharing of data or sharing is too complex. Whereas in DBMS, data can be shared easily due to centralized system.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Data concurrency &amp;ndash;&lt;/strong&gt;&amp;nbsp;Concurrent access to data means more than one user is accessing the same data at the same time. Anomalies occur when changes made by one user gets lost because of changes made by other user. File system does not provide any procedure to stop anomalies. Whereas DBMS provides a locking system to stop anomalies to occur.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Data searching &amp;ndash;&lt;/strong&gt;&amp;nbsp;For every search operation performed on file system, a different application program has to be written. While DBMS provides inbuilt searching operations. User only have to write a small query to retrieve data from database.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Data integrity &amp;ndash;&lt;/strong&gt;&amp;nbsp;There may be cases when some constraints need to be applied on the data before inserting it in database. The file system does not provide any procedure to check these constraints automatically. Whereas DBMS maintains data integrity by enforcing user defined constraints on data by itself.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;

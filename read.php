@@ -39,7 +39,7 @@ echo "<table class='table table-hover table-responsive table-bordered'>";
         echo "<th>Products</th>";
         echo "<th>Chapter</th>";
         echo "<th>Chapter id</th>";
-        echo "<th>Content</th>";
+        // echo "<th>Content</th>";
       
     echo "</tr>";
  
@@ -48,13 +48,17 @@ echo "<table class='table table-hover table-responsive table-bordered'>";
         echo "<td>{$product->Products}</td>";
         echo "<td>{$product->Product_part}</td>";
         echo "<td>{$product->chap_id}</td>";
-        echo "<td><a href='Chapters/{$file->myeditor}'>{$file->myeditor}</td>";
+        // echo "<td><a href='Chapters/{$file->myeditor}'>{$file->myeditor}</td>";
     echo "</tr>";
  
 echo "</table>";
+?>
+<label style='color:red'>Content:</label>
+<textarea  id="myeditor" name="myeditor" readonly><?php echo file_get_contents('./Chapters/'.$file->myeditor) ; ?></textarea>
+<?php
 echo "</div>";
  
 
 // set footer
-include_once "layout_footer.php";
+include_once "footer.php";
 ?>

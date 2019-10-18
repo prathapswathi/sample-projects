@@ -1,12 +1,87 @@
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
 
+&lt;h2&gt;&lt;strong&gt;What is Database Design?&lt;/strong&gt;&lt;/h2&gt;
 
+&lt;ul&gt;
+	&lt;li&gt;Database Design is a collection of processes that facilitate the designing, development, implementation and maintenance of enterprise data management systems&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;p&gt;It helps produce &amp;nbsp;database systems&lt;/p&gt;
 
-Hello World!
+&lt;ol&gt;
+	&lt;li&gt;That meet the requirements of the users&lt;/li&gt;
+	&lt;li&gt;Have high performance.&lt;/li&gt;
+&lt;/ol&gt;
 
+&lt;p&gt;The main objectives of database designing are to produce logical and physical designs models of the proposed database system.&lt;/p&gt;
 
-Hello World!Welcome to My Web Server.
+&lt;p&gt;&amp;nbsp;The logical model concentrates on the data requirements and the data to be stored independent of physical considerations. It does not concern itself with how the data will be stored or where it will be stored physically.&lt;/p&gt;
 
+&lt;p&gt;&amp;nbsp;The physical data design model involves translating the logical design of the database onto physical media using hardware resources and software systems such as database management systems (DBMS).&lt;/p&gt;
 
-Redundant Relationships Sometimes in your model you will get a &amp;#39;redundant relationship&amp;#39;. These are relationships that are already indicated by other relationships, although not directly. In the case of our example there is a direct relationships between customers and products. But there are also relationships from customers to sales and from sales to products, so indirectly there already is a relationship between customers and products through sales. The relationship &amp;#39;Customers &amp;lt;----&amp;gt; Products&amp;#39; is made twice, and one of them is therefore redundant. In this case, products are only purchased through a sale, so the relationships &amp;#39;Customers &amp;lt;----&amp;gt; Products&amp;#39; can be deleted. The model will then look like this: &amp;nbsp; Figure 3: Relationships between the entities.
+&lt;h2&gt;&lt;strong&gt;Why Database Design is Important ?&lt;/strong&gt;&lt;/h2&gt;
 
+&lt;p&gt;Database designing is crucial to&amp;nbsp;&lt;strong&gt;high performance&lt;/strong&gt;&amp;nbsp;database system.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;Apart from improving the performance, properly designed database are easy to maintain, improve data consistency and are cost effective in terms of disk storage space.&lt;/p&gt;
+
+&lt;p&gt;Note , the genius of a database is in its design . Data operations using SQL is relatively simple&lt;/p&gt;
+
+&lt;h2&gt;&lt;strong&gt;Database development life cycle&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/DatabaseDesignProcess(1).png&quot;&gt;&lt;img alt=&quot;Database Design Tutorial: Learn Data Modeling&quot; src=&quot;https://www.guru99.com/images/DatabaseDesignProcess(1).png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;The database development life cycle has a number of stages that are followed when developing database systems.&lt;/p&gt;
+
+&lt;p&gt;The steps in the development life cycle do not necessary have to be followed religiously in a sequential manner.&lt;/p&gt;
+
+&lt;p&gt;On small database systems, the database system development life cycle is usually very simple and does not involve a lot of steps.&lt;/p&gt;
+
+&lt;p&gt;In order to fully appreciate the above diagram, let&amp;#39;s look at the individual components listed in each step.&lt;/p&gt;
+
+&lt;h2&gt;&lt;strong&gt;Requirements analysis&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Planning&lt;/strong&gt;&amp;nbsp;- This stages concerns with planning of entire Database Development Life Cycle &amp;nbsp;It &amp;nbsp;takes into consideration the Information Systems strategy of the organization.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;System definition&lt;/strong&gt;&amp;nbsp;- This stage defines the scope and boundaries of the proposed database system.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;strong&gt;Database designing&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Logical model&lt;/strong&gt;&amp;nbsp;- This stage is concerned with developing a database model based on requirements. The entire design is on paper without any physical implementations or specific DBMS considerations.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Physical model&lt;/strong&gt;&amp;nbsp;- This stage implements the logical model of the database taking into account the DBMS and physical implementation factors.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Data conversion and loading&lt;/strong&gt;&amp;nbsp;- this stage is concerned with importing and converting data from the old system into the new database.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Testing&lt;/strong&gt;&amp;nbsp;- this stage is concerned with the identification of errors &amp;nbsp;in the newly implemented system .It checks the database against requirement specifications.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;strong&gt;Two Types of Database Techniques&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;strong&gt;Normalization&lt;/strong&gt;&lt;/li&gt;
+	&lt;li&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;strong&gt;ER Modeling&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2&gt;&lt;strong&gt;What is Normalization?&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Normalization is a database design technique which organizes tables in a manner that reduces redundancy and dependency of data.&lt;/p&gt;
+
+&lt;p&gt;It divides larger tables to smaller tables and links them using relationships.&lt;/p&gt;
+
+&lt;h2&gt;&lt;strong&gt;What is ER Modeling?&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Entity Relationship Modeling&amp;nbsp;&lt;/strong&gt;(ER Modeling) is a graphical approach to database design. It uses Entity/Relationship to represent real world objects.&lt;/p&gt;
+
+&lt;p&gt;An&amp;nbsp;&lt;strong&gt;Entity&amp;nbsp;&lt;/strong&gt;is a thing or object in real world that is distinguishable from surrounding environment. For example each employee of an organization is a separate entity. Following are some of major characteristics of entities.&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;An entity has a set of properties.&lt;/li&gt;
+	&lt;li&gt;Entity properties can &amp;nbsp;have values.&amp;nbsp;&lt;/li&gt;
+&lt;/ul&gt;

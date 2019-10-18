@@ -1,14 +1,182 @@
-Relational Model Concepts
+&lt;h2&gt;&lt;strong&gt;Relational Model Concepts&lt;/strong&gt;&lt;/h2&gt;
 
+&lt;ol&gt;
+	&lt;li&gt;&lt;strong&gt;Attribute:&lt;/strong&gt;&amp;nbsp;Each column in a Table. Attributes are the properties which define a relation. e.g., Student_Rollno, NAME,etc.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Tables&lt;/strong&gt;&amp;nbsp;&amp;ndash; In the Relational model the, relations are saved in the table format. It is stored along with its entities. A table has two properties rows and columns. Rows represent records and columns represent attributes.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Tuple&lt;/strong&gt;&amp;nbsp;&amp;ndash; It is nothing but a single row of a table, which contains a single record.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Relation Schema:&lt;/strong&gt;&amp;nbsp;A relation schema represents the name of the relation with its attributes.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Degree:&lt;/strong&gt;&amp;nbsp;The total number of attributes which in the relation is called the degree of the relation.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Cardinality:&amp;nbsp;&lt;/strong&gt;Total number of rows present in the Table.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Column:&lt;/strong&gt;&amp;nbsp;The column represents the set of values for a specific attribute.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Relation instance&lt;/strong&gt;&amp;nbsp;&amp;ndash; Relation instance is a finite set of tuples in the RDBMS system. Relation instances never have duplicate tuples.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Relation key&lt;/strong&gt;&amp;nbsp;- Every row has one, two or multiple attributes, which is called relation key.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Attribute domain&lt;/strong&gt;&amp;nbsp;&amp;ndash; Every attribute has some pre-defined value and scope which is known as attribute domain&lt;/li&gt;
+&lt;/ol&gt;
 
-	Attribute:&amp;nbsp;Each column in a Table. Attributes are the properties which define a relation. e.g., Student_Rollno, NAME,etc.
-	Tables&amp;nbsp;&amp;ndash; In the Relational model the, relations are saved in the table format. It is stored along with its entities. A table has two properties rows and columns. Rows represent records and columns represent attributes.
-	Tuple&amp;nbsp;&amp;ndash; It is nothing but a single row of a table, which contains a single record.
-	Relation Schema:&amp;nbsp;A relation schema represents the name of the relation with its attributes.
-	Degree:&amp;nbsp;The total number of attributes which in the relation is called the degree of the relation.
-	Cardinality:&amp;nbsp;Total number of rows present in the Table.
-	Column:&amp;nbsp;The column represents the set of values for a specific attribute.
-	Relation instance&amp;nbsp;&amp;ndash; Relation instance is a finite set of tuples in the RDBMS system. Relation instances never have duplicate tuples.
-	Relation key&amp;nbsp;- Every row has one, two or multiple attributes, which is called relation key.
-	Attribute domain&amp;nbsp;&amp;ndash; Every attribute has some pre-defined value and scope which is known as attribute domain
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD1.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD1.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
+&lt;h2&gt;&lt;strong&gt;Relational Integrity constraints&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Relational Integrity constraints is referred to conditions which must be present for a valid relation. These integrity constraints are derived from the rules in the mini-world that the database represents.&lt;/p&gt;
+
+&lt;p&gt;There are many types of integrity constraints. Constraints on the Relational database management system is mostly divided into three main categories are:&lt;/p&gt;
+
+&lt;ol&gt;
+	&lt;li&gt;Domain constraints&lt;/li&gt;
+	&lt;li&gt;Key constraints&lt;/li&gt;
+	&lt;li&gt;Referential integrity constraints&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Domain Constraints&lt;/h3&gt;
+
+&lt;p&gt;Domain constraints can be violated if an attribute value is not appearing in the corresponding domain or it is not of the appropriate data type.&lt;/p&gt;
+
+&lt;p&gt;Domain constraints specify that within each tuple, and the value of each attribute must be unique. This is specified as data types which include standard data types integers, real numbers, characters, Booleans, variable length strings, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;
+Create DOMAIN CustomerName
+CHECK (value not NULL)&lt;/pre&gt;
+
+&lt;p&gt;The example shown demonstrates creating a domain constraint such that CustomerName is not NULL&lt;/p&gt;
+
+&lt;h3&gt;Key constraints&lt;/h3&gt;
+
+&lt;p&gt;An attribute that can uniquely identify a tuple in a relation is called the key of the table. The value of the attribute for different tuples in the relation has to be unique.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the given table, CustomerID is a key attribute of Customer Table. It is most likely to have a single key for one customer, CustomerID =1 is only for the CustomerName =&amp;quot; Google&amp;quot;.&lt;/p&gt;
+
+&lt;table&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;CustomerID&lt;/td&gt;
+			&lt;td&gt;CustomerName&lt;/td&gt;
+			&lt;td&gt;Status&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;Google&lt;/td&gt;
+			&lt;td&gt;Active&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;2&lt;/td&gt;
+			&lt;td&gt;Amazon&lt;/td&gt;
+			&lt;td&gt;Active&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;3&lt;/td&gt;
+			&lt;td&gt;Apple&lt;/td&gt;
+			&lt;td&gt;Inactive&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+			&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+			&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3&gt;&lt;strong&gt;Referential integrity constraints&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;Referential integrity constraints is base on the concept of Foreign Keys. A foreign key is an important attribute of a relation which should be referred to in other relationships. Referential integrity constraint state happens where relation refers to a key attribute of a different or same relation. However, that key element must exist in the table.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD2.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD2.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above example, we have 2 relations, Customer and Billing.&lt;/p&gt;
+
+&lt;p&gt;Tuple for CustomerID =1 is referenced twice in the relation Billing. So we know CustomerName=Google has billing amount $300&lt;/p&gt;
+
+&lt;h2&gt;&lt;strong&gt;Operations in Relational Model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Four basic update operations performed on relational database model are&lt;/p&gt;
+
+&lt;p&gt;Insert, update, delete and select.&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Insert is used to insert data into the relation&lt;/li&gt;
+	&lt;li&gt;Delete is used to delete tuples from the table.&lt;/li&gt;
+	&lt;li&gt;Modify allows you to change the values of some attributes in existing tuples.&lt;/li&gt;
+	&lt;li&gt;Select allows you to choose a specific range of data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whenever one of these operations are applied, integrity constraints specified on the relational database schema must never be violated.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Insert Operation&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;The insert operation gives values of the attribute for a new tuple which should be inserted into a relation.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD3.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD3.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Update Operation&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;You can see that in the below-given relation table CustomerName= &amp;#39;Apple&amp;#39; is updated from Inactive to Active.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD4.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD4.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Delete Operation&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;To specify deletion, a condition on the attributes of the relation selects the tuple to be deleted.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD5.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD5.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above-given example, CustomerName= &amp;quot;Apple&amp;quot; is deleted from the table.&lt;/p&gt;
+
+&lt;p&gt;The Delete operation could violate referential integrity if the tuple which is deleted is referenced by foreign keys from other tuples in the same database.&lt;/p&gt;
+
+&lt;h3&gt;&lt;strong&gt;Select Operation&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD6.png&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://www.guru99.com/images/1/091318_0803_RelationalD6.png&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In the above-given example, CustomerName=&amp;quot;Amazon&amp;quot; is selected&lt;/p&gt;
+
+&lt;h2&gt;&lt;strong&gt;Best Practices for creating a Relational Model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Data need to be represented as a collection of relations&lt;/li&gt;
+	&lt;li&gt;Each relation should be depicted clearly in the table&lt;/li&gt;
+	&lt;li&gt;Rows should contain data about instances of an entity&lt;/li&gt;
+	&lt;li&gt;Columns must contain data about attributes of the entity&lt;/li&gt;
+	&lt;li&gt;Cells of the table should hold a single value&lt;/li&gt;
+	&lt;li&gt;Each column should be given a unique name&lt;/li&gt;
+	&lt;li&gt;No two rows can be identical&lt;/li&gt;
+	&lt;li&gt;The values of an attribute should be from the same domain&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;strong&gt;Advantages of using Relational model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;&lt;strong&gt;Simplicity&lt;/strong&gt;: A relational data model is simpler than the hierarchical and network model.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Structural Independence&lt;/strong&gt;: The relational database is only concerned with data and not with a structure. This can improve the performance of the model.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Easy to use&lt;/strong&gt;: The relational model is easy as tables consisting of rows and columns is quite natural and simple to understand&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Query capability&lt;/strong&gt;: It makes possible for a high-level query language like SQL to avoid complex database navigation.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Data independence&lt;/strong&gt;: The structure of a database can be changed without having to change any application.&lt;/li&gt;
+	&lt;li&gt;&lt;strong&gt;Scalable&lt;/strong&gt;: Regarding a number of records, or rows, and the number of fields, a database should be enlarged to enhance its usability.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;strong&gt;Disadvantages of using Relational model&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Few relational databases have limits on field lengths which can&amp;#39;t be exceeded.&lt;/li&gt;
+	&lt;li&gt;Relational databases can sometimes become complex as the amount of data grows, and the relations between pieces of data become more complicated.&lt;/li&gt;
+	&lt;li&gt;Complex relational database systems may lead to isolated databases where the information cannot be shared from one system to another.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;The Relational database model represents the database as a collection of relations (tables)&lt;/li&gt;
+	&lt;li&gt;Attribute, Tables, Tuple, Relation Schema, Degree, Cardinality, Column, Relation instance, are some important components of Relational Model&lt;/li&gt;
+	&lt;li&gt;Relational Integrity constraints are referred to conditions which must be present for a valid relation&lt;/li&gt;
+	&lt;li&gt;Domain constraints can be violated if an attribute value is not appearing in the corresponding domain or it is not of the appropriate data type&lt;/li&gt;
+	&lt;li&gt;Insert, Select, Modify and Delete are operations performed in Relational Model&lt;/li&gt;
+	&lt;li&gt;The relational database is only concerned with data and not with a structure which can improve the performance of the model&lt;/li&gt;
+	&lt;li&gt;Advantages of relational model is simplicity, structural independence, ease of use, query capability, data independence, scalability.&lt;/li&gt;
+	&lt;li&gt;Few relational databases have limits on field lengths which can&amp;#39;t be exceeded.&lt;/li&gt;
+&lt;/ul&gt;
