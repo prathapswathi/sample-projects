@@ -1,5 +1,4 @@
 <?php
-
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
  
 // set number of records per page
@@ -7,10 +6,8 @@ $records_per_page = 5;
  
 // calculate for the query LIMIT clause
 $from_record_num = ($records_per_page * $page) - $records_per_page;
-
 include_once 'libs/config/database.php';
 include_once 'objects/product.php';
-
 // instantiate database and objects
 $database = new Database();
 $db = $database->getConnection();
@@ -20,7 +17,6 @@ $product = new Product($db);
 // query products
 $stmt = $product->readAll($from_record_num, $records_per_page);
 $num = $stmt->rowCount();
-
 // set page header
 $page_title = "Products";
 include_once "header.php";
@@ -48,7 +44,6 @@ if($num>0){
                 echo "<td>{$Product_part}</td>";
                 echo "<td>";
                     // read one, edit and delete button will be here
-
                 // read, edit and delete buttons
 				echo "<a href='read.php?id={$id}' class='btn btn-primary left-margin'>
     			<span class='glyphicon glyphicon-list'></span> Read
@@ -61,12 +56,10 @@ if($num>0){
 				<a delete-id='{$id}' class='btn btn-danger delete-object'>
     			<span class='glyphicon glyphicon-remove'></span> Delete
 				</a> ";
-
                 // <a href='add_section.php?id={$id}' class='btn btn-info left-margin'>
     			// <span class='glyphicon glyphicon-plus'></span> Add Section
                 // </a>
                
-
                 echo "</td>";
  
             echo "</tr>";

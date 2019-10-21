@@ -30,9 +30,8 @@ echo "<div class='right-button-margin'  >";
     echo "<a href='index.php' class='btn btn-default pull-right' style='background-color:lightgray'>Products</a>";
    
     echo "</div>";
-    echo $id;
-?>
-
+ ?>
+<button type="button" style="background-color:orange;color:white">Create Product</button>
 <?php 
 
 if($_POST){  

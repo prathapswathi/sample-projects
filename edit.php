@@ -69,6 +69,7 @@ echo "<div class='right-button-margin' >";
 echo "</div>";
 
 ?>
+<button type="button" style="background-color:orange;color:white">Edit Product</button>
 
 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"] . "?id={$id}");?>" method="post">
     <table class='table table-hover table-responsive table-bordered'>

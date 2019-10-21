@@ -18,11 +18,9 @@ $file = new file($db);
 // set ID property of product to be read
 $product->id = $id;
 $file->id = $id;
-
 // read the details of product to be read
 $product->readOne();
 $file->fileget();
-
 $page_title = "Read Product";
 include_once "header.php";
  
@@ -31,8 +29,8 @@ echo "<div class='right-button-margin'>";
     echo "<a href='index.php' class='btn btn-primary pull-right' style='background-color:lightgray;color:black'>";
         echo "<span class='glyphicon glyphicon-list'></span> Products";
     echo "</a>";
-
-    // HTML table for displaying a product details
+    // echo "<button type='button' style='background-color:orange;color:white'>Read Product</button>";
+   
 echo "<table class='table table-hover table-responsive table-bordered'>";
  
     echo "<tr>";
@@ -58,7 +56,6 @@ echo "</table>";
 <?php
 echo "</div>";
  
-
 // set footer
 include_once "footer.php";
 ?>

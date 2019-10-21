@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/var/www/html/Sample1-mvc"
+		},
+		{
+			"path": "/var/www/html/php"
+		}
+	],
+	"settings": {}
+}
